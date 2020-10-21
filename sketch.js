@@ -22,7 +22,7 @@ function setup() {
   ground = new Block(windowWidth/2,(21/24)*windowHeight,windowWidth,windowHeight/40);
   bar1 = new Block(windowWidth/4,(15/16)*windowHeight,windowWidth/40,windowHeight/8);
   bar2 = new Block(3/4*windowWidth,(15/16)*windowHeight,windowWidth/40,windowHeight/8);
-  star = new Star(windowWidth,2/3*windowHeight,10,10);
+  star = new Star(600,800,10,10);
 
   pillar1 = new Block(520,885,windowWidth/60,(30/120)*windowHeight);
   pillar2 = new Block(540,895,windowWidth/60,(28/120)*windowHeight);
@@ -95,7 +95,7 @@ function draw() {
     Body.setPosition(side7.body, {x: (107/120)*windowWidth, y: (250/1200)*windowHeight});
     Body.setPosition(side8.body, {x: (108/120)*windowWidth, y: (275/1200)*windowHeight});
 
-    Body.setPosition(star.body, {x: 600, y: 800});
+    Body.setPosition(star.body, {x: windowWidth/2, y: 2/3*windowHeight});
   }
 
   if(level == 2){
@@ -121,7 +121,7 @@ function draw() {
     textSize(32);
   }
   else{
-    textSize(16);
+    textSize(8);
   }
   text("Use your mouse to drop a donut!",windowWidth/2,(113/120)*windowHeight);
   text("Get the star to level up!",windowWidth/2,(59/60)*windowHeight);

@@ -22,7 +22,7 @@ class Donut{
         translate(pos.x, pos.y);
         rotate(angle);
         imageMode(CENTER);
-        image(this.image,0,0,50,50);
+        image(this.image,0,0,windowWidth/24,windowHeight/24);
         pop();
     }
 
