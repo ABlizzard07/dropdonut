@@ -86,14 +86,14 @@ function draw() {
     Body.setPosition(pillar7.body, {x: (66/120)*windowWidth, y: (895/1200)*windowHeight});
     Body.setPosition(pillar8.body, {x: (68/120)*windowWidth, y: (885/1200)*windowHeight});
 
-    Body.setPosition(side1.body, {x: (15/120)*windowWidth, y: 200});
-    Body.setPosition(side2.body, {x: (14/120)*windowWidth, y: 225});
-    Body.setPosition(side3.body, {x: (13/120)*windowWidth, y: 250});
-    Body.setPosition(side4.body, {x: (12/120)*windowWidth, y: 275});
-    Body.setPosition(side5.body, {x: (105/120)*windowWidth, y: 200});
-    Body.setPosition(side6.body, {x: (106/120)*windowWidth, y: 225});
-    Body.setPosition(side7.body, {x: (107/120)*windowWidth, y: 250});
-    Body.setPosition(side8.body, {x: (108/120)*windowWidth, y: 275});
+    Body.setPosition(side1.body, {x: (15/120)*windowWidth, y: (200/1200)*windowHeight});
+    Body.setPosition(side2.body, {x: (14/120)*windowWidth, y: (225/1200)*windowHeight});
+    Body.setPosition(side3.body, {x: (13/120)*windowWidth, y: (250/1200)*windowHeight});
+    Body.setPosition(side4.body, {x: (12/120)*windowWidth, y: (275/1200)*windowHeight});
+    Body.setPosition(side5.body, {x: (105/120)*windowWidth, y: (200/1200)*windowHeight});
+    Body.setPosition(side6.body, {x: (106/120)*windowWidth, y: (225/1200)*windowHeight});
+    Body.setPosition(side7.body, {x: (107/120)*windowWidth, y: (250/1200)*windowHeight});
+    Body.setPosition(side8.body, {x: (108/120)*windowWidth, y: (275/1200)*windowHeight});
 
     Body.setPosition(star.body, {x: 600, y: 800});
   }
@@ -117,7 +117,12 @@ function draw() {
   }
 
   fill("purple");
-  textSize(32);
+  if(windowWidth > 700){
+    textSize(32);
+  }
+  else{
+    textSize(16);
+  }
   text("Use your mouse to drop a donut!",windowWidth/2,(113/120)*windowHeight);
   text("Get the star to level up!",windowWidth/2,(59/60)*windowHeight);
 
