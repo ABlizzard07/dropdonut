@@ -99,21 +99,21 @@ function draw() {
   }
 
   if(level == 2){
-    Body.setPosition(side2.body, {x: 180 , y: 240}); 
-    Body.setPosition(side3.body, {x: -90 , y: 240}); 
-    Body.setPosition(star.body, {x: 285, y: 220});
-    Body.setPosition(side6.body, {x: 1020 , y: 240}); 
-    Body.setPosition(side7.body, {x: 1290 , y: 240}); 
+    Body.setPosition(side2.body, {x: (18/120)*windowWidth, y: windowHeight/5}); 
+    Body.setPosition(side3.body, {x: -(9/120*windowWidth), y: windowHeight/5}); 
+    Body.setPosition(star.body, {x: (285/1200)*windowWidth, y: (22/120)*windowHeight});
+    Body.setPosition(side6.body, {x: (102/120)*windowWidth, y: windowHeight/5}); 
+    Body.setPosition(side7.body, {x: windowWidth+(9/120*windowWidth), y: windowHeight}); 
   }
 
   if(level == 3){
-    Body.setPosition(pillar4.body, {x: 520, y: 615});
-    Body.setPosition(pillar5.body, {x: 680, y: 615});
-    Body.setPosition(pillar3.body, {x: 520, y: 365});
-    Body.setPosition(pillar6.body, {x: 680, y: 365});
-    Body.setPosition(side2.body, {x: 440, y: 200});
-    Body.setPosition(side6.body, {x: 760, y: 200});
-    Body.setPosition(star.body, {x: 540, y: 750});
+    Body.setPosition(pillar4.body, {x: (52/120)*windowWidth, y: (615/1200)*windowHeight});
+    Body.setPosition(pillar5.body, {x: (68/120)*windowWidth, y: (615/1200)*windowHeight});
+    Body.setPosition(pillar3.body, {x: (52/120)*windowWidth, y: (365/1200)*windowHeight});
+    Body.setPosition(pillar6.body, {x: (68/120)*windowWidth, y: (365/1200)*windowHeight});
+    Body.setPosition(side2.body, {x: (44/120)*windowWidth, y: (200/1200)*windowHeight});
+    Body.setPosition(side6.body, {x: (76/120)*windowWidth, y: (200/1200)*windowHeight});
+    Body.setPosition(star.body, {x: (54/120)*windowWidth, y: (750/1200)*windowHeight});
   }
 
   fill("purple");
