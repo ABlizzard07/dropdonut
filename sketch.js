@@ -12,35 +12,35 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1200, 1200);
+  createCanvas(windowWidth, windowHeight);
 
   engine = Engine.create();
   world = engine.world;
   
   donut = new Donut(600,-10,10);
 
-  ground = new Block(600,1050,1200,30);
-  bar1 = new Block(300,1125,30,150);
-  bar2 = new Block(900,1125,30,150);
-  star = new Star(600,800,10,10);
+  ground = new Block(windowWidth/2,(21/24)*windowHeight,windowWidth,windowHeight/40);
+  bar1 = new Block(windowWidth/4,(15/16)*windowHeight,windowWidth/40,windowHeight/8);
+  bar2 = new Block(3/4*windowWidth,(15/16)*windowHeight,windowWidth/40,windowHeight/8);
+  star = new Star(windowWidth,2/3*windowHeight,10,10);
 
-  pillar1 = new Block(520,885,20,300);
-  pillar2 = new Block(540,895,20,280);
-  pillar3 = new Block(560,905,20,260);
-  pillar4 = new Block(580,915,20,240);
-  pillar5 = new Block(620,915,20,240);
-  pillar6 = new Block(640,905,20,260);
-  pillar7 = new Block(660,895,20,280);
-  pillar8 = new Block(680,885,20,300);
+  pillar1 = new Block(520,885,windowWidth/60,(30/120)*windowHeight);
+  pillar2 = new Block(540,895,windowWidth/60,(28/120)*windowHeight);
+  pillar3 = new Block(560,905,windowWidth/60,(26/120)*windowHeight);
+  pillar4 = new Block(580,915,windowWidth/60,(24/120)*windowHeight);
+  pillar5 = new Block(620,915,windowWidth/60,(24/120)*windowHeight);
+  pillar6 = new Block(640,905,windowWidth/60,(26/120)*windowHeight);
+  pillar7 = new Block(660,895,windowWidth/60,(28/120)*windowHeight);
+  pillar8 = new Block(680,885,windowWidth/60,(30/120)*windowHeight);
 
-  side1 = new Block(150,200,300,20);
-  side2 = new Block(140,225,280,20);
-  side3 = new Block(130,250,260,20);
-  side4 = new Block(120,275,240,20);
-  side5 = new Block(1050,200,300,20);
-  side6 = new Block(1060,225,280,20);
-  side7 = new Block(1070,250,260,20);
-  side8 = new Block(1080,275,240,20);
+  side1 = new Block(150,200,windowWidth/4,windowHeight/60);
+  side2 = new Block(140,225,(28/120)*windowWidth,windowHeight/60);
+  side3 = new Block(130,250,(26/120)*windowWidth,windowHeight/60);
+  side4 = new Block(120,275,(24/120)*windowWidth,windowHeight/60);
+  side5 = new Block(1050,200,windowWidth/4,windowHeight/60);
+  side6 = new Block(1060,225,(28/120)*windowWidth,windowHeight/60);
+  side7 = new Block(1070,250,(26/120)*windowWidth,windowHeight/60);
+  side8 = new Block(1080,275,(24/120)*windowWidth,windowHeight/60);
 
   Engine.run(engine);
 }
@@ -77,23 +77,23 @@ function draw() {
   detectCollision(donut,star);
 
   if(level == 1){
-    Body.setPosition(pillar1.body, {x: 520, y: 885});
-    Body.setPosition(pillar2.body, {x: 540, y: 895});
-    Body.setPosition(pillar3.body, {x: 560, y: 905});
-    Body.setPosition(pillar4.body, {x: 580, y: 915});
-    Body.setPosition(pillar5.body, {x: 620, y: 915});
-    Body.setPosition(pillar6.body, {x: 640, y: 905});
-    Body.setPosition(pillar7.body, {x: 660, y: 895});
-    Body.setPosition(pillar8.body, {x: 680, y: 885});
+    Body.setPosition(pillar1.body, {x: (52/120)*windowWidth, y: (885/1200)*windowHeight});
+    Body.setPosition(pillar2.body, {x: (54/120)*windowWidth, y: (895/1200)*windowHeight});
+    Body.setPosition(pillar3.body, {x: (56/120)*windowWidth, y: (905/1200)*windowHeight});
+    Body.setPosition(pillar4.body, {x: (58/120)*windowWidth, y: (915/1200)*windowHeight});
+    Body.setPosition(pillar5.body, {x: (62/120)*windowWidth, y: (915/1200)*windowHeight});
+    Body.setPosition(pillar6.body, {x: (64/120)*windowWidth, y: (905/1200)*windowHeight});
+    Body.setPosition(pillar7.body, {x: (66/120)*windowWidth, y: (895/1200)*windowHeight});
+    Body.setPosition(pillar8.body, {x: (68/120)*windowWidth, y: (885/1200)*windowHeight});
 
-    Body.setPosition(side1.body, {x: 150, y: 200});
-    Body.setPosition(side2.body, {x: 140, y: 225});
-    Body.setPosition(side3.body, {x: 130, y: 250});
-    Body.setPosition(side4.body, {x: 120, y: 275});
-    Body.setPosition(side5.body, {x: 1050, y: 200});
-    Body.setPosition(side6.body, {x: 1060, y: 225});
-    Body.setPosition(side7.body, {x: 1070, y: 250});
-    Body.setPosition(side8.body, {x: 1080, y: 275});
+    Body.setPosition(side1.body, {x: (15/120)*windowWidth, y: 200});
+    Body.setPosition(side2.body, {x: (14/120)*windowWidth, y: 225});
+    Body.setPosition(side3.body, {x: (13/120)*windowWidth, y: 250});
+    Body.setPosition(side4.body, {x: (12/120)*windowWidth, y: 275});
+    Body.setPosition(side5.body, {x: (105/120)*windowWidth, y: 200});
+    Body.setPosition(side6.body, {x: (106/120)*windowWidth, y: 225});
+    Body.setPosition(side7.body, {x: (107/120)*windowWidth, y: 250});
+    Body.setPosition(side8.body, {x: (108/120)*windowWidth, y: 275});
 
     Body.setPosition(star.body, {x: 600, y: 800});
   }
@@ -118,13 +118,13 @@ function draw() {
 
   fill("purple");
   textSize(32);
-  text("Use your mouse to drop a donut!",600,1130);
-  text("Get the star to level up!",600,1180);
+  text("Use your mouse to drop a donut!",windowWidth/2,(113/120)*windowHeight);
+  text("Get the star to level up!",windowWidth/2,(59/60)*windowHeight);
 
   if(level < 4){
-    text("Level: "+level,150,1150);
+    text("Level: "+level,windowWidth/8,(23/24)*windowHeight);
   }
-    text("Tries: "+tries,1050,1150);
+    text("Tries: "+tries,7/8*windowWidth,(23/24)*windowHeight);
 
   if(level == 4){
     fill("red");
@@ -133,22 +133,22 @@ function draw() {
     textSize(44);
 
      if(tries <= 3){
-        text("God Rank",600,100);
+        text("God Rank",windowWidth/2,windowHeight/12);
      }
      else if(tries > 3 && tries <= 6){
-        text("Master Rank",600,100);
+        text("Master Rank",windowWidth/2,windowHeight/12);
      }
      else if(tries > 6 && tries <= 10){
-        text("Expert Rank",600,100);
+        text("Expert Rank",windowWidth/2,windowHeight/12);
      }
      else if(tries > 10 && tries <= 15){
-       text("Amateur Rank",600,100);
+       text("Amateur Rank",windowWidth/2,windowHeight/12);
      }
      else if(tries > 15 && tries <= 21){
-       text("Beginner Rank",600,100);
+       text("Beginner Rank",windowWidth/2,windowHeight/12);
      }
      else{
-       text("GIT GUD",600,100);
+       text("GIT GUD",windowWidth/2,windowHeight/12);
      }
 
   }
